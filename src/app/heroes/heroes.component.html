@@ -1,0 +1,19 @@
+<div>
+  <h2>
+    <!-- {{ hero.name|uppercase }} -->
+  </h2>
+  <!-- Edit Hero Name: <input type="text" [value]='hero.name' (input)="hero.name=$event.target.value" > -->
+</div>
+
+<div>
+  <ul>
+    <li *ngFor = "let hero of heroes" (click)="selectHero(hero)">{{ hero.name }}</li>
+  </ul>
+</div>
+
+<!-- <div *ngIf = selectedHero>
+  {{ selectedHero.name }}
+</div> -->
+
+
+<app-hero-detail [hero] = "selectedHero" (deleteHeroRequest)="deleteHero($event)"></app-hero-detail>

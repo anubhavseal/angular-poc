@@ -1,0 +1,11 @@
+<h3>Hero Details</h3>
+
+<div *ngIf="incomingHero">
+  <span [class.special] ="apply" (click)="delete()">Hero: {{ incomingHero.name }}</span>
+  <span [style.color] ="'red'" (click)="delete()">Hero: {{ incomingHero.name }}</span>
+  <h4>Attribute Directive</h4>
+  <span [appAppHighlight]="'yellow'" [defaultColor]="'red'">I am a Super Attribute Directive</span>
+  <h4>Structural Directive</h4>
+  <span *appUnless="falsy">I am a Super Structural Directive</span>
+
+</div>
